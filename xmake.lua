@@ -118,5 +118,9 @@ target("llaisys")
         if is_plat("linux") then
             os.cp("lib/*.so", "python/llaisys/libllaisys/")
         end
+        if is_plat("macosx") then
+            -- python loader expects `llaisys.dylib` (no `lib` prefix)
+            os.cp("lib/libllaisys.dylib", "python/llaisys/libllaisys/llaisys.dylib")
+        end
     end)
 target_end()

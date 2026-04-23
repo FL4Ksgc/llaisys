@@ -30,6 +30,7 @@ cache/
 
 #GGUF
 *.gguf
+models/
 
 
 # Byte-compiled / optimized / DLL files
